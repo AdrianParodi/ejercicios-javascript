@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px,solid, red;
+    height:600px;
+}
+
+img{
+    margin:40px 50px;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    transition: height 0.7s, width 0.8s;
+}
+
+.img100{
+    margin:40px 50px;
+    height: 100px;
+    width: 100px;
+}
+
+.img500{
+    margin:40px 50px;
+    height: 400px;
+    width: 400px;
+}

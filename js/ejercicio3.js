@@ -1,28 +1,16 @@
-// Ejercicio 3: Determinación de Números Primos
-// Descripción: Determina si un número entero es primo.
+// Dado un array de números, escribir una función que devuelva un array con todos los números mayores a 10.
 
-// Instrucciones:
+function mayor10(array){
+    let array_mayor10 = []
 
-// Declara una variable para un número entero.
-// Usa una sentencia if y un bucle para determinar si el número es primo.
-// Muestra el resultado en la consola.
-
-let n=13
-let mensaje3 = " "
-
-for (let i=2 ; i < n; i++){
-    resto = n%i
-    if (resto == 0){
-        mensaje3= "es primo" 
-        break  // si el numero es primo ya no sigo el bucle for
-    }
-
-    else{
-        mensaje3= "no es primo"
-    }
-
+    for(let numero of array){
+        if (numero > 10) {array_mayor10.push(numero)}
+        }
+    return array_mayor10
 }
 
-console.log(`El numero ${n} ${mensaje3}`);
+let numeros = [10, 50, 45, 8, 4, -5, 33]
 
+let mayores_10 = mayor10(numeros)
 
+console.log(`El array original es: ${numeros}. \nEl resultado es: ${mayores_10}`)

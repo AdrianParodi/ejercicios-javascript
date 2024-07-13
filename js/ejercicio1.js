@@ -1,30 +1,15 @@
-// Ejercicio 1: Conversión de Temperaturas
-// Descripción: Convierte una temperatura dada en grados Celsius a grados
-//  Fahrenheit y determina si la temperatura en Fahrenheit es alta, baja o moderada.
-// Instrucciones:
+//1) Dado un array de números, escribir una función que calcule la suma de todos los números del array.
 
-// Declara una variable para almacenar una temperatura en grados Celsius.
-// Calcula la temperatura en grados Fahrenheit usando la fórmula:
-// F=C×1.8+32.
-// Usa una sentencia if para determinar si la temperatura en Fahrenheit es
-//  mayor a 85 (alta), menor a 32 (baja) o moderada.
-// Muestra el resultado en la consola.
+let numeros = [1,2,3,5,6,7,8,9]
 
-let temp_celsius = -2
-let temp_farenheit = temp_celsius*1.8 + 32
-let mensaje = "hola"
+// console.log(numeros)
+let acumulador=0
+
+numeros.forEach(function(element) {
+    acumulador = acumulador + element
+    // No hace falta retornar acumulador, ya que esta variable
+    // está definida en el mismo ambito que la funcion pasada a forEach
+});
 
 
-if (temp_farenheit < 32){
-    mensaje = "Temperatura baja"
-}
-
-else if (temp_farenheit >= 32 && temp_farenheit <= 85){
-    mensaje = "Temperatura moderada"
-}
-
-else{
-    mensaje = "Temperatura alta"
-}
-
-console.log(mensaje)
+console.log(`acumulador vale ${acumulador}`)

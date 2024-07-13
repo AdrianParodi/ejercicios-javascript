@@ -1,26 +1,25 @@
-// Ejercicio 5: Cálculo del Descuento
-// Descripción: Calcula el precio final de un producto aplicando un descuento basado en su precio inicial.
+// Mediante el uso del método indexOf y splice, desarrollar una función que reciba un array de strings y un stringEliminar, la misma función nos devolverá un array sin el elemento que se eliminó. En caso de no tener el elemento a eliminar se deberá retornar null.
 
-// Instrucciones:
 
-// Declara una variable para el precio inicial del producto.
-// Usa sentencias if para aplicar un 10% de descuento si el precio es mayor a 100, un 5% si está entre 50 y 100, y sin descuento si es menor a 50.
-// Calcula el precio final y muestra el resultado en la consola.
+function limpiarElemento(stringArray, stringEliminar){
+    let nuevo_array = []
+    let indice = stringArray.indexOf(stringEliminar)
+    if (indice != -1) {
+        let izquierda = stringArray.slice(0,indice)
+        let derecha = stringArray.slice(indice+1, stringArray.length)
 
-let precio = 49
-let resultado5 = 0
-let descuento = 0
+        for(i=0; i<izquierda.length; i++){
+            nuevo_array.push(izquierda[i])
+        }
 
-if (precio>100){
-    descuento = 0.1
+        for(j=0; j<derecha.length; j++){
+            nuevo_array.push(derecha[j])
+        }
+
+        console.log(nuevo_array)     
+    }
+    else{console.log(null)}
 }
-else if(precio>=50){
-    descuento = 0.05
-}
-else{
-    descuento = 0
-}
 
-resultado5 = precio*(1-descuento)
-
-console.log(`El precio inicial es de ${precio} y con el descuento del ${descuento*100}% el precio final queda en $${resultado5}`)
+let palabras = ["hola", "mundo", "loco", "y", "groso"]
+limpiarElemento(palabras, "groso")
